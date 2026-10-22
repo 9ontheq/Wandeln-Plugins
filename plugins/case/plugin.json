@@ -1,0 +1,11 @@
+{
+  "id": "case",
+  "name": "Change case",
+  "type": "palette",
+  "keyword": "case",
+  "command": "case.py",
+  "description": "Converts the typed text to UPPER, lower or Title case and copies it.",
+  "author": "9ontheq",
+  "version": "1.0.0",
+  "requires": ["python"]
+}

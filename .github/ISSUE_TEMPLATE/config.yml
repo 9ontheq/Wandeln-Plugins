@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Wandeln app bugs and requests
+    url: https://wandeln.app
+    about: For the app itself

@@ -1,0 +1,29 @@
+# Format checks for plugin PRs. Runs on `pull_request` (not
+# pull_request_target): it only reads the PR's files and never needs
+# secrets or write access, so fork code can't get at anything. Nothing
+# from the PR is executed — validate.mjs only parses and measures files.
+name: Validate plugins
+
+on:
+  pull_request:
+    paths:
+      - "plugins/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Validate
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: node scripts/validate.mjs

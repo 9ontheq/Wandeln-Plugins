@@ -1,0 +1,41 @@
+# Rebuilds index.json (the list the website reads) whenever plugins change
+# on main, and publishes it on the `index` branch:
+#   https://raw.githubusercontent.com/9ontheq/Wandeln-Plugins/index/index.json
+# A separate branch because main is protected (every change needs a
+# reviewed PR), which the bot can't push through.
+name: Build index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "plugins/**"
+      - "scripts/build-index.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: index
+  cancel-in-progress: false
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - run: node scripts/build-index.mjs
+      - name: Publish to the index branch
+        run: |
+          mkdir -p "$RUNNER_TEMP/out" && mv index.json "$RUNNER_TEMP/out/"
+          cd "$RUNNER_TEMP/out"
+          git init -q -b index
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -q -m "index.json for ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" index

@@ -1,0 +1,10 @@
+{
+  "id": "uptime",
+  "name": "Uptime",
+  "type": "bar",
+  "command": "uptime.ps1",
+  "interval": 60,
+  "description": "Shows how long the PC has been running on the bar.",
+  "author": "9ontheq",
+  "version": "1.0.0"
+}
