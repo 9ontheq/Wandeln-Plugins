@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "case",
+      "name": "Change case",
+      "type": "palette",
+      "keyword": "case",
+      "description": "Converts the typed text to UPPER, lower or Title case and copies it.",
+      "author": "9ontheq",
+      "version": "1.0.0",
+      "requires": [
+        "python"
+      ],
+      "url": "https://github.com/Unitze/Wandeln-Plugins/tree/main/plugins/case",
+      "files": [
+        "https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/main/plugins/case/README.md",
+        "https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/main/plugins/case/case.py",
+        "https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/main/plugins/case/plugin.json"
+      ]
+    },
+    {
+      "id": "uptime",
+      "name": "Uptime",
+      "type": "bar",
+      "keyword": null,
+      "description": "Shows how long the PC has been running on the bar.",
+      "author": "9ontheq",
+      "version": "1.0.0",
+      "requires": [],
+      "url": "https://github.com/Unitze/Wandeln-Plugins/tree/main/plugins/uptime",
+      "files": [
+        "https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/main/plugins/uptime/README.md",
+        "https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/main/plugins/uptime/plugin.json",
+        "https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/main/plugins/uptime/uptime.ps1"
+      ]
+    }
+  ]
+}
