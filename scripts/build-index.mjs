@@ -3,7 +3,7 @@
 import { writeFileSync } from "node:fs";
 import { pluginFiles, pluginIds, readManifest } from "./lib.mjs";
 
-const REPO = "9ontheq/Wandeln-Plugins";
+const REPO = "Unitze/Wandeln-Plugins";
 
 const plugins = [];
 for (const id of pluginIds()) {

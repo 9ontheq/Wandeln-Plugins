@@ -21,7 +21,7 @@ that add commands and search providers to the palette, or items to the top bar.
 3. Press "Reload" in Settings → Plugins.
 
 A machine-readable list of all plugins is published as
-[`index.json`](https://raw.githubusercontent.com/9ontheq/Wandeln-Plugins/index/index.json)
+[`index.json`](https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/index/index.json)
 and rebuilt on every merge.
 
 ## Publishing a plugin

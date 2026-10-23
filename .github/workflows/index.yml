@@ -1,6 +1,6 @@
 # Rebuilds index.json (the list the website reads) whenever plugins change
 # on main, and publishes it on the `index` branch:
-#   https://raw.githubusercontent.com/9ontheq/Wandeln-Plugins/index/index.json
+#   https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/index/index.json
 # A separate branch because main is protected (every change needs a
 # reviewed PR), which the bot can't push through.
 name: Build index

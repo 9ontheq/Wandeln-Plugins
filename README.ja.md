@@ -20,7 +20,7 @@
 3. 設定 → プラグイン の「再読み込み」を押します。
 
 全プラグインの一覧は
-[`index.json`](https://raw.githubusercontent.com/9ontheq/Wandeln-Plugins/index/index.json)
+[`index.json`](https://raw.githubusercontent.com/Unitze/Wandeln-Plugins/index/index.json)
 にもまとまっています(マージのたびに自動更新)。
 
 ## プラグインを公開する
