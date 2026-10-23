@@ -1,5 +1,7 @@
 # Wandeln Plugins
 
+**English** | [日本語](README.ja.md)
+
 Community plugins for [Wandeln](https://wandeln.app). Plugins are small scripts
 that add commands and search providers to the palette, or items to the top bar.
 
